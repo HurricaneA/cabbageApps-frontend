@@ -1,0 +1,45 @@
+// @import '~bootswatch/dist/darkly/variables';
+@import '~bootstrap/scss/bootstrap';
+// @import '~bootswatch/dist/darkly/bootswatch';
+
+.center-card {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-span {
+  color: red;
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.taskItem {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 5px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+  // .titlebar {
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   width: 100%;
+  // }
+
+  .toggle-btn {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+  }
+}
