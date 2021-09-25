@@ -3,7 +3,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import { BiShow, BiHide } from 'react-icons/bi';
 
 import './App.scss';
 import AddTask from './components/AddTask';
@@ -36,9 +35,10 @@ function App() {
               </Card.Title>
               <Button
                 variant='light'
+                className='toggle-btn'
                 onClick={() => sethideAddTask(!hideAddTask)}
               >
-                {hideAddTask ? <BiShow size={40} /> : <BiHide size={40} />}
+                {hideAddTask ? 'Show' : 'Hide'}
               </Button>
               {hideAddTask ? null : (
                 <>

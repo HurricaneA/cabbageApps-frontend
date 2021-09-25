@@ -16,10 +16,12 @@ export interface NewTask {
   date: string;
 }
 
+const baseUrl = 'http://localhost:8000/tasks';
+
 export const fetchTasks = (term?: string) => {
   return (dispatch: Dispatch<Action>) => {
     axios
-      .get(`http://localhost:8000/tasks/?order=${term}`)
+      .get(`${baseUrl}/?order=${term}`)
       .then((res) => {
         const tasks: Task[] = res.data.tasks;
         dispatch({
@@ -39,7 +41,7 @@ export const fetchTasks = (term?: string) => {
 export const addTask = (newtask: NewTask) => {
   return (dispatch: Dispatch<Action>) => {
     axios
-      .post('http://localhost:8000/tasks', newtask)
+      .post(`${baseUrl}`, newtask)
       .then((res) => {
         const addedTask: Task = res.data;
         dispatch({
@@ -59,7 +61,7 @@ export const addTask = (newtask: NewTask) => {
 export const deleteTask = (id: string) => {
   return (dispatch: Dispatch<Action>) => {
     axios
-      .delete(`http://localhost:8000/tasks/${id}`)
+      .delete(`${baseUrl}/${id}`)
       .then((res) => {
         dispatch({
           type: ActionType.DELETE_TASKS_SUCCESS,
@@ -84,7 +86,7 @@ export const updateTask = (
   return (dispatch: Dispatch<Action>) => {
     console.log('received ', id, title, completed, date);
     axios
-      .patch(`http://localhost:8000/tasks/${id}`, {
+      .patch(`${baseUrl}/${id}`, {
         title: title,
         completed: completed,
         date: date,
