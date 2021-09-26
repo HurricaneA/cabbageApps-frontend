@@ -1,0 +1,57 @@
+.item {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  width: 24rem;
+  display: flex;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin-bottom: 10px;
+}
+
+.item-expanded {
+  height: 100px;
+  flex-direction: column;
+}
+
+.item-closed {
+  height: 20px;
+}
+
+.mark-complete {
+  border-left: 3px solid #56cc9d;
+}
+
+.mark-incomplete {
+  border-left: 3px solid #ff7851;
+}
+
+.titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.title {
+  white-space: nowrap;
+  width: 40%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-wrap: wrap;
+}
+
+.date {
+  width: 40%;
+  justify-content: flex-end;
+  display: flex;
+  font-weight: 400;
+}
+
+.dropdown {
+  cursor: pointer;
+}
+
+.bottombar {
+  align-self: flex-end;
+}
